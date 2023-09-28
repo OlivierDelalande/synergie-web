@@ -72,6 +72,9 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 Nest is [MIT licensed](LICENSE).
 
+===================================================================================================================================================
+===================================================================================================================================================
+
 
 # TECHNICAL STEPS
 
@@ -93,3 +96,21 @@ In case you ar creating an open sourced application, add a license.md fil. Check
 Checkout a feature branch and name it for example FF1TT3 (if you are working on front feature number one and related technial task number three)
 or for example BF2TT4 (if you are working on back feature number two and related technial task number four)
 or for example DF3TT5 (if you are working on docker feature number three and related technial task number five)...
+
+Split your code into consistent commits.
+Add the right gitmoji to all your commits messages.
+Only push package-lock.json if you are actually adding a dependency. Otherwise, let dependabot or specific upgrade dependencies tickets do so.
+If your ticket involves creating a new route, remind to update the swagger available at baseUrl/api
+
+Remember done is better than perfect.
+Everything can be challenged and we can come back to improve, create tickets to make a different implementation if it makes sense.
+Be nice and constructive during review.
+
+## Linter
+
+## Prettier
+
+## OpenAPI
+
+[npm install --save @nestjs/swagger](https://docs.nestjs.com/openapi/introduction) 
+Using [@nestjs/swagger CLI Plugin](https://docs.nestjs.com/openapi/cli-plugin) 
