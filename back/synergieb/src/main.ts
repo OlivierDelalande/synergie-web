@@ -7,9 +7,7 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('Synergie web')
-    .setDescription('Routes')
     .setVersion('1.0')
-    .addTag('synergie')
     .build();
   
   const document = SwaggerModule.createDocument(app, config);
