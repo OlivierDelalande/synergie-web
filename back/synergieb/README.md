@@ -114,3 +114,4 @@ Be nice and constructive during review.
 
 [npm install --save @nestjs/swagger](https://docs.nestjs.com/openapi/introduction) 
 Using [@nestjs/swagger CLI Plugin](https://docs.nestjs.com/openapi/cli-plugin) 
+Remind to make use of the logger to ease development. Logging the fact you enter a function with the argument you receive can help. Logging what gets out of a function can too.
