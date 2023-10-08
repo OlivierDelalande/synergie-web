@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BackCommService } from './backcomm.service';
-import { Observable } from 'rxjs';
-import { Greetings } from './interface/greetings';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-backcomm',
@@ -9,16 +8,24 @@ import { Greetings } from './interface/greetings';
   styleUrls: ['./backcomm.component.scss']
 })
 export class BackcommComponent implements OnInit {
-  greetings: any = ''
+  obs: Subscription | undefined;
+
+  greetings = ''
   constructor(private backcommService: BackCommService) {}
 
   getGreetings() {
-    this.greetings = this.backcommService
+  this.obs = this.backcommService
       .getGreetings()
-      .subscribe(data => console.log('data', data.greetings))
+      .subscribe(data => {
+        this.greetings = data.greetings;
+        console.log('data', data.greetings)
+      })
   }
 
   ngOnInit(): void {
     this.getGreetings();
+  }
+  ngOnDestroy() {
+    this.obs?.unsubscribe();
   }
 }
