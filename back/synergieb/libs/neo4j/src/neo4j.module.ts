@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { Neo4jService } from './neo4j.service';
+import { Neo4jDbService } from './neo4j.service';
 
 @Module({
-  providers: [Neo4jService],
-  exports: [Neo4jService],
+  providers: [Neo4jDbService],
+  exports: [Neo4jDbService],
 })
 export class Neo4jModule {}
