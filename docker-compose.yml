@@ -1,0 +1,14 @@
+version: '2.4'
+
+services:
+  angular:
+    image: angular:0.0.0
+    build: angular
+    ports:
+      - 4200:80
+
+  server:
+    image: back:0.0.0
+    build: back
+    ports:
+      - 3000:3000
