@@ -1,14 +1,15 @@
-version: '2.4'
-
+version: '3.8'
 services:
-  angular:
-    image: angular:0.0.0
-    build: angular
+  client:
+    build: 
+      context: ./front/synergief
+      dockerfile: Dockerfile
     ports:
-      - 4200:80
-
+      - "80:80"
+  
   server:
-    image: back:0.0.0
-    build: back
+    build:
+      context: ./back/synergieb
+      dockerfile: Dockerfile
     ports:
-      - 3000:3000
+      - "3000:3000"
